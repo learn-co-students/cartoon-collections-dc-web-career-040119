@@ -1,39 +1,38 @@
-
-dwarves = ["Dopey", "Grumpy", "Bashful"]
-veggies = ["carrot", "cucumber", "pepper"]
-cheese_types = ["cheddar", "gouda", "camembert"]
-calls_long = [ "earth", "wind", "fire", "heart"]
-
-def roll_call_dwarves(array)
-  index = 0
-  array.each_with_index do|name, index|
-     puts "#{index + 1}. #{name}"
-end
-
-
-#def roll_call_dwarves(dwarf)
-  # code an argument here
+def roll_call_dwarves(dwarves)
   # Your code here
+  dwarves.each_with_index {|name,num| puts "#{num+1} #{name}"}
 
- # i = 0
-#dwarf.each_with_index do {|name,i| puts "#{i + 1}. #{name}"}
-   # end
+end
 
 def summon_captain_planet(veggies)# code an argument here
   # Your code here
-veggies.map! {|name| name.capitalize}
-names.each {|name| puts name + "!"}
+  # planeteer_calls = ["earth", "wind", "fire", "water", "heart"]
+    veggies.collect do |call| 
+    call.capitalize + "!"
+  end
 
 end
 
 
-def long_planeteer_calls(calls_long)# code an argument here
+def long_planeteer_calls(array)
   # Your code here
-  word = o
-
-  if calls_long.any? {|word| word.length > 4}
-    return true
-else
-  return false
+  array.any? {|word| word.size > 4}
 end
+
+def find_the_cheese(array)
+  # the array below is here to help
+  cheese_types = ["cheddar", "gouda", "camembert"]
+  count = 0
+
+  while count < cheese_types.size
+  newArr = array.select {|food| food == cheese_types[count]}
+  if newArr.size > 0
+  return newArr.join()
+  end
+  count += 1
+  end
+
+  return nil
+
+
 end

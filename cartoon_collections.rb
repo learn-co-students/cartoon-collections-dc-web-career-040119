@@ -4,9 +4,10 @@ veggies = ["carrot", "cucumber", "pepper"]
 cheese_types = ["cheddar", "gouda", "camembert"]
 calls_long = [ "earth", "wind", "fire", "heart"]
 
-def roll_call_dwarves(dwarf)
+def roll_call_dwarves(array)
   index = 0
-  dwarf.each_with_index {|name, index| puts "#{index + 1}. #{name} "}
+  array.each_with_index do|name, index|
+     puts "#{index + 1}. #{name}"
 end
 
 
@@ -16,17 +17,23 @@ end
 
  # i = 0
 #dwarf.each_with_index do {|name,i| puts "#{i + 1}. #{name}"}
-
-     #   end
-     # end
    # end
 
-def summon_captain_planet# code an argument here
+def summon_captain_planet(veggies)# code an argument here
   # Your code here
+veggies.map! {|name| name.capitalize}
+names.each {|name| puts name + "!"}
 
 end
 
-def long_planeteer_calls# code an argument here
-  # Your code here
 
+def long_planeteer_calls(calls_long)# code an argument here
+  # Your code here
+  word = o
+
+  if calls_long.any? {|word| word.length > 4}
+    return true
+else
+  return false
+end
 end
